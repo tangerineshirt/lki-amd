@@ -7,7 +7,13 @@ module.exports = {
         './resources/css/**/*.css',
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                cinzel: ['Cinzel Decorative', 'serif'],  // Font Cinzel Decorative
+                indie: ['Indie Flower', 'cursive'],      // Font Indie Flower
+                lateef: ['Lateef', 'serif'],             // Font Lateef
+            },
+        },
     },
     plugins: [],
 }

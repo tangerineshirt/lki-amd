@@ -7,13 +7,14 @@
 @source "../**/*.vue";
 @tailwind utilities;
 
+
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 li{
-    @apply inline-flex justify-items-center transition-transform duration-300 text-white hover:scale-110
+    @apply inline-flex justify-items-center transition-transform duration-300 text-amber-400 hover:scale-110
 }
 
 ul{
@@ -21,6 +22,13 @@ ul{
 }
 
 .btn{
-    @apply bg-orange-300 rounded-lg font-bold p-2
+    @apply bg-gray-500 rounded-2xl font-bold p-2 transition-colors duration-200 hover:bg-white
 }
 
+p{
+    @apply text-justify
+}
+
+body{
+    @apply bg-gradient-to-b from-blue-900 to-blue-300
+}
