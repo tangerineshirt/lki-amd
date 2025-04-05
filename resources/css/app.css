@@ -13,9 +13,7 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-li{
-    @apply inline-flex justify-items-center transition-transform duration-300 text-amber-400 hover:scale-110
-}
+
 
 ul{
     @apply justify-between space-x-5
@@ -25,10 +23,36 @@ ul{
     @apply bg-gray-500 rounded-2xl font-bold p-2 transition-colors duration-200 hover:bg-white
 }
 
+body{
+    height: auto;
+    min-height: 100vh;
+}
+
 p{
     @apply text-justify
 }
 
-body{
-    @apply bg-gradient-to-b from-blue-900 to-blue-300
+.navs{
+    @apply inline-flex justify-items-center transition-transform duration-300 text-amber-400 hover:scale-110
+}
+
+.divisi{
+    @apply font-bold m-8 mb-1
+}
+
+.divider{
+    @apply mr-8 ml-8 border-2 border-gray-300 rounded-4xl
+}
+
+
+input{
+    @apply block w-full mt-2 mb-4 p-2 bg-gray-200
+}
+
+.login{
+    @apply bg-amber-300 rounded-lg hover:scale-110 transition-transform duration-300 p-2
+}
+
+.form-layout{
+    @apply max-w-screen-sm mx-auto p-10 bg-blue-100 m-20 rounded-2xl space-y-6
 }

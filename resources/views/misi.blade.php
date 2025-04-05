@@ -1,0 +1,20 @@
+<x-navbar>
+    <h1 class="text-6xl justify-self-center m-10 mb-6">Misi</h1>
+    <hr class="justify-self-center w-16 border-4 border-amber-400 rounded-2xl">
+    <p>
+    <ol type="1" class="justify-self-center mt-4 bg-gray-100 rounded-2xl p-8 shadow-lg">
+        <li>
+            1. Menanamkan kesadaran akan pentingnya pengamalan nilai-nilai Islam di tengah masyarakat.
+        </li>
+        <li>
+            2. Mengoptimalkan peran lembaga sebagai wadah pengembangan spiritual dan intelektual.
+        </li>
+        <li>
+            3. Mewadahi pengembangan potensi dan kreativitas anggota di berbagai bidang dengan berlandaskan konsep Islam.
+        </li>
+        <li>
+            4. Mewadahi mahasiswa Fakultas Ilmu Komputer untuk menyalurkan minat dan bakat di bidang religi.
+        </li>
+    </ol>
+    </p>
+</x-navbar>

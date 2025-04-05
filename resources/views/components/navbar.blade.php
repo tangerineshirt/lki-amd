@@ -5,11 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LKI-AMD</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Indie+Flower&family=Lateef:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
     @vite('resources/css/app.css')
 </head>
 
@@ -18,30 +13,42 @@
         <div class="flex h-20 mx-6 my-1 justify-between items-center">
             <img class="my-2 h-16" src="../public/images/Logo_LKI-AMD.png" alt="Logo LKI-AMD">
             <ul class="flex gap-4 justify-center">
-                <li>
-                    <a href="">Home</a>
+                <li class="navs">
+                    <a href="{{url('/')}}">Home</a>
                 </li>
-                <li>
-                    <a href="">Program Kerja</a>
+                <li class="navs">
+                    <a href="{{route('divisi')}}">Divisi</a>
                 </li>
-                <li>
-                    <a href="">Kepengurusan</a>
+                <li class="navs">
+                    <a href="{{route('proker')}}">Program Kerja</a>
                 </li>
-                <li>
-                    <a href="">Visi</a>
+                <li class="navs">
+                    <a href="{{route('pengurus')}}">Kepengurusan</a>
                 </li>
-                <li>
-                    <a href="">Misi</a>
+                <li class="navs">
+                    <a href="{{route('visi')}}">Visi</a>
+                </li>
+                <li class="navs">
+                    <a href="{{route('misi')}}">Misi</a>
                 </li>
             </ul>
+            @guest
             <button class="btn">
-                <a href="">Admin</a>
+                <a href="{{route('show.Admin')}}">Admin</a>
             </button>
+            @endguest
+            @auth
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button class="btn">Logout</button>
+            </form>
+            @endauth
         </div>
     </nav>
     <main>
         {{ $slot }}
     </main>
+
 </body>
 
 </html>

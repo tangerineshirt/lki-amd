@@ -1,5 +1,5 @@
 <x-navbar>
-    <div class="flex items-center justify-center h-screen"
+    <div class="flex items-center justify-center h-screen rounded-2xl"
         style="background-image: url('../public/images/white-masjid.jpg'); background-size: cover; background-position: center;">
         <img src="../public/images/Fotbar_AMD.jpg" alt="" class="max-w-250 max-h-120 m-1 rounded-2xl shadow-2xl">
     </div>
@@ -19,12 +19,12 @@
             </p>
         </div>
     </div>
-    <h1 class="m-8 mt-20 mb-4 text-6xl justify-self-center text-white">
+    <h1 class="m-8 mt-20 mb-4 text-6xl justify-self-center">
         Karakter Kami
     </h1>
     <hr class="border-4 w-32 border-amber-500 rounded-2xl justify-self-center">
-    <div class="m-8 rounded-2xl shadow-lg bg-gray-50">
-        <h1 class="pt-10 pl-10 text-2xl text-amber-400">
+    <div class="m-8 rounded-2xl shadow-lg bg-gradient-to-r from-blue-400 to-blue-100">
+        <h1 class="pt-10 pl-10 text-2xl text-amber-200">
             <b>Shiddiq</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -38,8 +38,8 @@
         </div>
     </div>
 
-    <div class="m-8 rounded-2xl shadow-lg bg-gray-50">
-        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-400">
+    <div class="m-8 rounded-2xl shadow-lg bg-gradient-to-l from-blue-400 to-blue-100">
+        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-200">
             <b>Amanah</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -51,8 +51,8 @@
             <img src="../public/images/amanah.png" alt="" class="w-30 h-auto mr-4">
         </div>
     </div>
-    <div class="m-8 rounded-2xl shadow-lg bg-gray-50">
-        <h1 class="pt-10 pl-10 text-2xl text-amber-400">
+    <div class="m-8 rounded-2xl shadow-lg bg-gradient-to-r from-blue-400 to-blue-100">
+        <h1 class="pt-10 pl-10 text-2xl text-amber-200">
             <b>Fathonah</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -64,8 +64,8 @@
             </p>
         </div>
     </div>
-    <div class="m-8 rounded-2xl shadow-lg bg-gray-50">
-        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-400">
+    <div class="m-8 rounded-2xl shadow-lg bg-gradient-to-l from-blue-400 to-blue-100">
+        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-200">
             <b>Tabligh</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
