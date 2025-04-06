@@ -45,7 +45,7 @@ p{
 }
 
 
-input{
+input, select{
     @apply block w-full mt-2 mb-4 p-2 bg-gray-200
 }
 

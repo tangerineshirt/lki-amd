@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Division;
-use App\Models\Proker;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class DivisionController extends Controller
 {
@@ -15,20 +13,12 @@ class DivisionController extends Controller
         return view('divisi', ['divisions' => $divisions]);
     }
 
-    public function proker(){
-        $prokers = Proker::with('division')->orderBy('start')->get();
-        return view('proker', ['prokers' => $prokers]);
-    }
-
     public function visi(){
         return view('visi');
     }
 
     public function misi(){
         return view('misi');
-    }
-    public function pengurus(){
-        return view('pengurus');
     }
 
     public function showDivision(Division $division){
@@ -51,7 +41,6 @@ class DivisionController extends Controller
             'description' => $validated['description'],
             // 'image' => $path, 
         ]);
-
         return redirect()->route('divisi');
     }
 }

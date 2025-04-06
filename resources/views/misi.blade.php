@@ -1,6 +1,9 @@
 <x-navbar>
-    <h1 class="text-6xl justify-self-center m-10 mb-6">Misi</h1>
-    <hr class="justify-self-center w-16 border-4 border-amber-400 rounded-2xl">
+    <div class="text-center mt-12 mb-6">
+        <h1 class="text-4xl font-bold">Misi</h1>
+        <hr class="mx-auto w-24 border-4 border-amber-400 rounded-2xl mt-2">
+    </div>
+
     <p>
     <ol type="1" class="justify-self-center mt-4 bg-gray-100 rounded-2xl p-8 shadow-lg">
         <li>

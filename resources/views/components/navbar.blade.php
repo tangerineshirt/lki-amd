@@ -11,7 +11,7 @@
 <body>
     <nav class="bg-gradient-to-r from-blue-400 to-blue-900 p-0.25 w-full shadow-2xl">
         <div class="flex h-20 mx-6 my-1 justify-between items-center">
-            <img class="my-2 h-16" src="../public/images/Logo_LKI-AMD.png" alt="Logo LKI-AMD">
+            <img class="my-2 h-16" src="{{ asset('images/Logo_LKI-AMD.png') }}" alt="Logo LKI-AMD">
             <ul class="flex gap-4 justify-center">
                 <li class="navs">
                     <a href="{{url('/')}}">Home</a>
