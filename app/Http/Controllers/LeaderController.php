@@ -44,4 +44,10 @@ class LeaderController extends Controller
 
         return redirect()->route('pengurus');
     }
+
+    public function deleteLeader(Leader $leader){
+        $leader->delete();
+
+        return redirect()->route('pengurus');
+    }
 }

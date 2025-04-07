@@ -45,10 +45,18 @@
             @endauth
         </div>
     </nav>
-    <main>
+    <main class="flex-1">
         {{ $slot }}
     </main>
-
+    <footer class="bg-gradient-to-r from-blue-400 to-blue-900 p-0.25 w-full">
+        <div class="flex h-20 mx-6 my-1 justify-between items-center">
+            <p class="text-white">© 2025 LKI-AMD</p>
+            <div class="flex justify-between items-center">
+                <img src="{{asset('images/ub.png')}}" alt="Logo UB" class="h-16">
+                <img src="{{asset('images/filkom.png')}}" alt="Logo FILKOM" class="h-16">
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

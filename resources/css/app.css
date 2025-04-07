@@ -26,6 +26,7 @@ ul{
 body{
     height: auto;
     min-height: 100vh;
+    @apply flex flex-col min-h-screen
 }
 
 p{
@@ -55,4 +56,8 @@ input, select{
 
 .form-layout{
     @apply max-w-screen-sm mx-auto p-10 bg-blue-100 m-20 rounded-2xl space-y-6
+}
+
+.delete{
+    @apply bg-red-600 rounded-lg hover:scale-110 transition-transform duration-300 p-2 text-black
 }

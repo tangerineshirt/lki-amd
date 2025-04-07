@@ -13,7 +13,7 @@
         </div>
     @endauth
 
-    <h1 class="m-8 font-bold">Badan Pengurus Inti</h1>
+    <h1 class="m-8 font-bold text-4xl">Badan Pengurus Inti</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
         @foreach ($intiLeaders as $intileader)
             <a href="{{ route('show.leader', $intileader->id) }}">
@@ -29,8 +29,8 @@
         @endforeach
     </div>
 
-    <h1 class="m-8 font-bold">Badan Pengurus Harian</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
+    <h1 class="m-8 font-bold text-4xl mt-16">Badan Pengurus Harian</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8 mb-8">
         @foreach ($harianLeaders as $harianLeader)
             <a href="{{ route('show.leader', $harianLeader->id) }}">
                 <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition flex-col justify-items-center">

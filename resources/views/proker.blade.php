@@ -13,7 +13,7 @@
         </div>
     @endauth
 
-    <div class="space-y-4 max-w-3xl w-full mx-auto px-4">
+    <div class="space-y-4 max-w-3xl w-full mx-auto px-4 mb-8">
         @foreach ($divisions as $division)
             <h2 class="text-2xl font-bold mt-6 mb-2">{{ $division->name }}</h2>
             <ul class="space-y-4">

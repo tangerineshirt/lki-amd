@@ -7,12 +7,14 @@
 
         <label for="rank" class="block font-semibold mb-1">Badan Pengurus:</label>
         <select name="rank" id="rank">
+            <option value="" disabled selected>Pilih Jenis Pengurus</option>
             <option value="Inti">Inti</option>
             <option value="Harian">Harian</option>
         </select>
 
         <label for="position" class="block font-semibold mb-1">Posisi:</label>
         <select name="position" id="position">
+            <option value="" disabled selected>Pilih Posisi</option>
             <option value="Ketua Umum">Ketua Umum</option>
             <option value="Wakil Ketua">Wakil Ketua</option>
             <option value="Sekretaris">Sekretaris</option>

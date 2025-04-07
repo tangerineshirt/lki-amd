@@ -13,7 +13,7 @@
         </div>
     @endauth
 
-    <ul class="space-y-4 max-w-3xl w-full mx-auto px-4">
+    <ul class="space-y-4 max-w-3xl w-full mx-auto px-4 mb-8">
         @foreach ($divisions as $division)
             <li class="flex">
                 <div class="w-full flex flex-wrap items-center justify-between bg-gray-100 px-6 py-4 rounded-xl shadow hover:shadow-md transition">

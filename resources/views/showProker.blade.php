@@ -1,5 +1,5 @@
 <x-navbar>
-    <div class="max-w-4xl mx-auto mt-16 px-6">
+    <div class="max-w-4xl mx-auto mt-16 px-6 mb-8">
         <h1 class="text-4xl font-bold text-center text-gray-800 mb-4">{{ $proker->name }}</h1>
         <h4 class="text-xl font-semibold text-center mb-2">Mulai:
             {{ \Carbon\Carbon::parse($proker->start)->format('d M Y') }}</h4>
@@ -13,6 +13,16 @@
             {{ $proker->description }}
         </p>
         <img src="{{ asset('storage/' . $proker->image) }}" alt="{{ $proker->name }}"
-            class="mt-6 w-full max-w-xl mx-auto rounded-2xl shadow-2xl object-cover aspect-video">
+            class="mt-6 max-w-3xl mx-auto rounded-2xl shadow-2xl object-cover">
+
+        @auth
+            <div class="flex justify-center">
+                <form action="{{ route('delete.proker', $proker->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="delete my-4">Delete</button>
+                </form>
+            </div>
+        @endauth
     </div>
 </x-navbar>

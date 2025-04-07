@@ -43,4 +43,10 @@ class ProkerController extends Controller
         ]);
         return redirect()->route('proker');
     }
+
+    public function deleteProker(Proker $proker){
+        $proker->delete();
+
+        return redirect()->route('proker');
+    }
 }

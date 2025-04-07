@@ -19,7 +19,7 @@
             </p>
         </div>
     </div>
-    <h1 class="m-8 mt-20 mb-4 text-6xl justify-self-center">
+    <h1 class="m-8 mt-20 mb-4 text-4xl justify-self-center font-bold">
         Karakter Kami
     </h1>
     <hr class="border-4 w-32 border-amber-500 rounded-2xl justify-self-center">

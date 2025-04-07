@@ -43,4 +43,10 @@ class DivisionController extends Controller
         ]);
         return redirect()->route('divisi');
     }
+
+    public function deleteDivision(Division $division){
+        $division->delete();
+
+        return redirect()->route('divisi');
+    }
 }
