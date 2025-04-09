@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\InfoController;
 use App\Http\Controllers\ProkerController;
 use App\Http\Controllers\LeaderController;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,10 @@ Route::get('/proker/{proker}', [ProkerController::class, 'showProker'])->name('s
 Route::get('/pengurus', [LeaderController::class, 'pengurus'])->name('pengurus');
 Route::get('/pengurus/{leader}', [LeaderController::class, 'showLeader'])->name('show.leader');
 
+//mengatur halaman berita untuk guest
+Route::get('/berita', [InfoController::class, 'info'])->name('info');
+Route::get('/berita/{info}', [InfoController::class, 'showInfo'])->name('show.info');
+
 //mengatur login admin untuk guest
 Route::middleware('guest')->controller(AuthController::class)->group(function(){
     Route::get('/admin', 'showAdmin')->name('show.Admin');
@@ -39,19 +44,26 @@ Route::middleware('guest')->controller(AuthController::class)->group(function(){
 Route::middleware('auth')->controller(DivisionController::class)->group(function(){
     Route::get('/addDivision', 'showAddDivision')->name('show.addDivision');
     Route::post('/addDivision', 'addDivision')->name('addDivision');
-    Route::delete('/addDivision/{division}', 'deleteDivision')->name('delete.division');
+    Route::delete('/divisi/{division}', 'deleteDivision')->name('delete.division');
 });
 
 //mengatur halaman tambah proker untuk admin
 Route::middleware('auth')->controller(ProkerController::class)->group(function(){
     Route::get('/addProker', 'showAddProker')->name('show.addProker');
     Route::post('/addProker', 'addProker')->name('addProker');
-    Route::delete('/addProker/{proker}', 'deleteProker')->name('delete.proker');
+    Route::delete('/proker/{proker}', 'deleteProker')->name('delete.proker');
 });
 
 //mengatur halaman tambah pengurus untuk admin
 Route::middleware('auth')->controller(LeaderController::class)->group(function(){
     Route::get('/addLeader', 'showAddLeader')->name('show.addLeader');
     Route::post('/addLeader', 'addLeader')->name('addLeader');
-    Route::delete('/addLeader/{leader}', 'deleteLeader')->name('delete.leader');
+    Route::delete('/pengurus/{leader}', 'deleteLeader')->name('delete.leader');
+});
+
+//mengatur halaman tambah berita untuk admin
+Route::middleware('auth')->controller(InfoController::class)->group(function(){
+    Route::get('/addInfo', 'showAddInfo')->name('show.addInfo');
+    Route::post('/addInfo', 'addInfo')->name('addInfo');
+    Route::delete('/berita/{info}', 'deleteInfo')->name('delete.info');
 });

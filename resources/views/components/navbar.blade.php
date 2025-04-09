@@ -9,46 +9,70 @@
 </head>
 
 <body>
-    <nav class="bg-gradient-to-r from-blue-400 to-blue-900 p-0.25 w-full shadow-2xl">
-        <div class="flex h-20 mx-6 my-1 justify-between items-center">
-            <img class="my-2 h-16" src="{{ asset('images/Logo_LKI-AMD.png') }}" alt="Logo LKI-AMD">
+    <nav>
+        <div class="flex h-12 mx-6 my-1 justify-between items-center">
+            <img class="my-2 h-8" src="{{ asset('images/putihHitam.png') }}" alt="Logo LKI-AMD">
             <ul class="flex gap-4 justify-center">
-                <li class="navs">
-                    <a href="{{url('/')}}">Home</a>
+                <li>
+                    <a href="{{url('/')}}" class="relative group text-sm font-semibold text-white pb-1">
+                        Home
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
+                    </a>
                 </li>
-                <li class="navs">
-                    <a href="{{route('divisi')}}">Divisi</a>
+                <li>
+                    <a href="{{route('divisi')}}" class="relative group text-sm font-semibold text-white pb-1">
+                        Divisi
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
+                    </a>
                 </li>
-                <li class="navs">
-                    <a href="{{route('proker')}}">Program Kerja</a>
+                <li>
+                    <a href="{{route('proker')}}" class="relative group text-sm font-semibold text-white pb-1">
+                        Program Kerja
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
+                    </a>
                 </li>
-                <li class="navs">
-                    <a href="{{route('pengurus')}}">Kepengurusan</a>
+                <li>
+                    <a href="{{route('pengurus')}}" class="relative group text-sm font-semibold text-white pb-1">
+                        Kepengurusan
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
+                    </a>
                 </li>
-                <li class="navs">
-                    <a href="{{route('visi')}}">Visi</a>
+                <li>
+                    <a href="{{route('visi')}}" class="relative group text-sm font-semibold text-white pb-1">
+                        Visi
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
+                    </a>
                 </li>
-                <li class="navs">
-                    <a href="{{route('misi')}}">Misi</a>
+                <li>
+                    <a href="{{route('misi')}}" class="relative group text-sm font-semibold text-white pb-1">
+                        Misi
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('info')}}" class="relative group text-sm font-semibold text-white pb-1">
+                        Berita
+                        <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
+                    </a>
                 </li>
             </ul>
             @guest
-            <button class="btn">
-                <a href="{{route('show.Admin')}}">Admin</a>
-            </button>
+            <a href="{{route('show.Admin')}}">
+                <p class="admin">Admin</p>
+            </a>
             @endguest
             @auth
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button class="btn">Logout</button>
+                <button class="admin">Logout</button>
             </form>
             @endauth
         </div>
     </nav>
-    <main class="flex-1">
+    <main class="overflow-x-hidden flex-1 pt-12">
         {{ $slot }}
     </main>
-    <footer class="bg-gradient-to-r from-blue-400 to-blue-900 p-0.25 w-full">
+    <footer class=" bg-blue-950 bg-blend-color p-0.25 w-full">
         <div class="flex h-20 mx-6 my-1 justify-between items-center">
             <p class="text-white">© 2025 LKI-AMD</p>
             <div class="flex justify-between items-center">

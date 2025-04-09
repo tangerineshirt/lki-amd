@@ -8,12 +8,9 @@
 @tailwind utilities;
 
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+nav{
+    @apply p-0.25 w-full shadow-2xl bg-blend-color bg-blue-950 fixed top-0 z-50
 }
-
-
 
 ul{
     @apply justify-between space-x-5
@@ -31,10 +28,6 @@ body{
 
 p{
     @apply text-justify
-}
-
-.navs{
-    @apply inline-flex justify-items-center transition-transform duration-300 text-amber-400 hover:scale-110
 }
 
 .divisi{
@@ -61,3 +54,19 @@ input, select{
 .delete{
     @apply bg-red-600 rounded-lg hover:scale-110 transition-transform duration-300 p-2 text-black
 }
+
+.admin{
+    @apply rounded-md text-white font-semibold p-1 text-sm border-2 border-white hover:bg-white hover:text-black transition-all duration-300
+}
+
+.news{
+    @apply w-full bg-gray-100 px-6 py-4 rounded-xl border-b-4 border-r-4 border-b-gray-400 border-r-gray-400 shadow-md hover:scale-105 transition-transform duration-300
+}
+
+.listDiv{
+    @apply w-full flex flex-wrap items-center justify-between bg-gray-100 px-6 py-4 rounded-xl shadow-md border-b-4 border-r-4 border-b-gray-400 border-r-gray-400 hover:shadow-lg transition-shadow duration-300
+}
+
+/* * {
+    outline: 1px red solid;
+} */

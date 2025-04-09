@@ -13,10 +13,10 @@
         </div>
     @endauth
 
-    <ul class="space-y-4 max-w-3xl w-full mx-auto px-4 mb-8">
+    <ul class="max-w-3xl w-full space-y-4 mx-auto px-4 mb-8">
         @foreach ($divisions as $division)
-            <li class="flex">
-                <div class="w-full flex flex-wrap items-center justify-between bg-gray-100 px-6 py-4 rounded-xl shadow hover:shadow-md transition">
+            <li class="flex {{ $loop->last ? 'mr-5' : '' }}">
+                <div class="listDiv">
                     <h3 class="text-lg font-medium text-gray-800 break-words">{{ $division->name }}</h3>
                     <a href="{{ route('show.division', $division->id) }}"
                        class="bg-amber-400 hover:bg-amber-500 text-white px-4 py-2 rounded-lg transition mt-2 sm:mt-0">

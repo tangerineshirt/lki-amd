@@ -14,10 +14,10 @@
     @endauth
 
     <h1 class="m-8 font-bold text-4xl">Badan Pengurus Inti</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 px-8">
         @foreach ($intiLeaders as $intileader)
             <a href="{{ route('show.leader', $intileader->id) }}">
-                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition flex-col justify-items-center">
+                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition flex-col justify-items-center h-full">
                     <div class="w-48 h-64 flex items-center justify-center">
                         <img src="{{ asset('storage/' . $intileader->image) }}" alt="{{ $intileader->name }}"
                             class="max-h-full object-contain rounded-lg mb-4">
@@ -30,10 +30,10 @@
     </div>
 
     <h1 class="m-8 font-bold text-4xl mt-16">Badan Pengurus Harian</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 px-8 mb-8">
         @foreach ($harianLeaders as $harianLeader)
             <a href="{{ route('show.leader', $harianLeader->id) }}">
-                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition flex-col justify-items-center">
+                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition flex-col justify-items-center h-full">
                     <div class="w-48 h-64 flex items-center justify-center">
                         <img src="{{ asset('storage/' . $harianLeader->image) }}" alt="{{ $harianLeader->name }}"
                             class="max-h-full object-contain rounded-lg mb-4">

@@ -3,7 +3,7 @@
         style="background-image: url('../public/images/white-masjid.jpg'); background-size: cover; background-position: center;">
         <img src="../public/images/Fotbar_AMD.jpg" alt="" class="max-w-250 max-h-120 m-1 rounded-2xl shadow-2xl">
     </div>
-    <div class="flex flex-col items-center align-top m-8 bg-gray-50 rounded-2xl shadow-lg border-blue-500">
+    <div class="flex flex-col items-center align-top m-8 bg-gray-50 rounded-2xl shadow-md hover:shadow-lg">
         <img src="../public/images/salam.png" alt="" class="max-w-100 max-h-50">
         <hr class="w-64 border-t-4 border-black my-4 rounded-2xl">
         <div class="p-10">

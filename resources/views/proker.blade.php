@@ -18,9 +18,9 @@
             <h2 class="text-2xl font-bold mt-6 mb-2">{{ $division->name }}</h2>
             <ul class="space-y-4">
                 @foreach ($division->prokers as $proker)
-                    <li class="flex">
+                    <li class="flex {{ $loop->last ? 'mr-5' : '' }}">
                         <div
-                            class="w-full flex flex-wrap items-center justify-between bg-gray-100 px-6 py-4 rounded-xl shadow hover:shadow-md transition">
+                            class="listDiv">
                             <h3 class="text-lg font-medium text-gray-800 break-words">{{ $proker->name }}</h3>
                             <a href="{{ route('show.Proker', $proker->id) }}"
                                 class="bg-amber-400 hover:bg-amber-500 text-white px-4 py-2 rounded-lg transition mt-2 sm:mt-0">
