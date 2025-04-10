@@ -1,13 +1,13 @@
 <x-navbar>
     <div class="text-center mt-12 mb-6">
         <h1 class="text-4xl font-bold">Divisi</h1>
-        <hr class="mx-auto w-24 border-4 border-amber-400 rounded-2xl mt-2">
+        <hr class="line">
     </div>
 
     @auth
         <div class="flex justify-center mb-10">
             <a href="{{ route('show.addDivision') }}"
-               class="bg-amber-400 hover:bg-amber-500 text-white font-semibold px-6 py-2 rounded-lg transition hover:scale-105 duration-300">
+               class="add">
                 + Tambah Divisi
             </a>
         </div>

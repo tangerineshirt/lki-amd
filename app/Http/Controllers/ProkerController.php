@@ -30,7 +30,7 @@ class ProkerController extends Controller
             'description' => 'required|string|min:20|max:2000',
             'start' => 'required|date',
             'end' => 'required|date|after_or_equal:start',
-            'image' => 'required|image|max:2048',
+            'image' => 'image|max:2048',
         ]);
         $path = $request->file('image')->store('prokers', 'public');
         Proker::create([

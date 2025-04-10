@@ -12,8 +12,10 @@
         <p class="text-lg text-gray-700 leading-relaxed text-justify bg-gray-100 rounded-lg p-8 shadow-lg">
             {{ $proker->description }}
         </p>
-        <img src="{{ asset('storage/' . $proker->image) }}" alt="{{ $proker->name }}"
-            class="mt-6 max-w-3xl mx-auto rounded-2xl shadow-2xl object-cover">
+        @if ($proker->image)
+            <img src="{{ asset('storage/' . $proker->image) }}" alt="{{ $proker->name }}"
+                class="mt-6 max-w-3xl mx-auto rounded-2xl shadow-2xl object-cover">
+        @endif
 
         @auth
             <div class="flex justify-center">

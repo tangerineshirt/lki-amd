@@ -29,7 +29,7 @@
 
         {{-- gambar --}}
         <label for="image" class="block font-semibold mb-1">Gambar Proker:</label>
-        <input type="file" name="image" id="image" accept="image/*" required>
+        <input type="file" name="image" id="image" accept="image/*">
 
         {{-- deskripsi --}}
         <label for="description" class="block font-semibold mb-1">Deskripsi:</label>

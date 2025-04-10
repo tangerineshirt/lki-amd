@@ -1,9 +1,12 @@
 <x-navbar>
-    <div class="flex items-center justify-center h-screen rounded-2xl"
-        style="background-image: url('../public/images/white-masjid.jpg'); background-size: cover; background-position: center;">
-        <img src="../public/images/Fotbar_AMD.jpg" alt="" class="max-w-250 max-h-120 m-1 rounded-2xl shadow-2xl">
+    <div class="flex items-center justify-center h-screen"
+        style="background-image: url('{{asset('images/fotbar_hitamputih.png')}}'); background-size: cover; background-position: center;">
+        <div class="flex flex-col items-center">
+            <h1 class="font-bold text-9xl text-white">LKI-AMD</h1>
+            <p class="text-white font-semibold">Lembaga Kajian Islam Al-Fatih Muslim Drenalin</p>
+        </div>
     </div>
-    <div class="flex flex-col items-center align-top m-8 bg-gray-50 rounded-2xl shadow-md hover:shadow-lg">
+    <div class="div-des">
         <img src="../public/images/salam.png" alt="" class="max-w-100 max-h-50">
         <hr class="w-64 border-t-4 border-black my-4 rounded-2xl">
         <div class="p-10">
@@ -23,8 +26,8 @@
         Karakter Kami
     </h1>
     <hr class="border-4 w-32 border-amber-500 rounded-2xl justify-self-center">
-    <div class="m-8 rounded-2xl shadow-lg bg-gradient-to-r from-blue-400 to-blue-100">
-        <h1 class="pt-10 pl-10 text-2xl text-amber-200">
+    <div class="m-8 rounded-2xl shadow-md bg-gradient-to-r from-blue-100 to-blue-50 ">
+        <h1 class="pt-10 pl-10 text-2xl text-amber-300">
             <b>Shiddiq</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -38,8 +41,8 @@
         </div>
     </div>
 
-    <div class="m-8 rounded-2xl shadow-lg bg-gradient-to-l from-blue-400 to-blue-100">
-        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-200">
+    <div class="m-8 rounded-2xl shadow-md bg-gradient-to-l from-blue-100 to-blue-50">
+        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-300">
             <b>Amanah</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -51,8 +54,8 @@
             <img src="../public/images/amanah.png" alt="" class="w-30 h-auto mr-4">
         </div>
     </div>
-    <div class="m-8 rounded-2xl shadow-lg bg-gradient-to-r from-blue-400 to-blue-100">
-        <h1 class="pt-10 pl-10 text-2xl text-amber-200">
+    <div class="m-8 rounded-2xl shadow-md bg-gradient-to-r from-blue-100 to-blue-50">
+        <h1 class="pt-10 pl-10 text-2xl text-amber-300">
             <b>Fathonah</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -64,8 +67,8 @@
             </p>
         </div>
     </div>
-    <div class="m-8 rounded-2xl shadow-lg bg-gradient-to-l from-blue-400 to-blue-100">
-        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-200">
+    <div class="m-8 rounded-2xl shadow-md bg-gradient-to-l from-blue-100 to-blue-50">
+        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-300">
             <b>Tabligh</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">

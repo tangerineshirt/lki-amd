@@ -15,7 +15,7 @@
                 class="mt-6 max-w-3xl mx-auto rounded-2xl object-cover">
         @endif
         <p class="text-lg text-gray-700 leading-relaxed text-justify bg-gray-100 rounded-lg p-8 shadow-lg mx-8">
-            {{ $info->content }}
+            {!! nl2br(e($info->content)) !!}
         </p>
         @auth
             <div class="flex justify-center">
