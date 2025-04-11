@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import 'tailwindcss';
+
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -56,7 +58,8 @@ input, select{
 }
 
 .admin{
-    @apply rounded-md text-white font-semibold p-1 text-sm border-2 border-white hover:bg-white hover:text-black transition-all duration-300
+    font-family: 'Poppins', 'sans-serif';
+    @apply rounded-md text-white font-semibold p-1 text-sm border-2 border-white hover:bg-white hover:text-black transition-all duration-300 
 }
 
 .news{
@@ -77,6 +80,18 @@ input, select{
 
 .line{
     @apply mx-auto w-24 border-4 border-gray-400 rounded-2xl mt-2
+}
+
+.ini-font{
+    font-family: 'Poppins', sans-serif;
+}
+
+.karakter{
+    @apply m-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300
+}
+
+.info-btn{
+    @apply bg-blue-950 hover:bg-white hover:text-black text-white px-4 py-2 rounded-lg transition mt-2 sm:mt-0
 }
 
 /* * {

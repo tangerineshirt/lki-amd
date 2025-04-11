@@ -23,7 +23,7 @@
                             class="listDiv">
                             <h3 class="text-lg font-medium text-gray-800 break-words">{{ $proker->name }}</h3>
                             <a href="{{ route('show.Proker', $proker->id) }}"
-                                class="bg-amber-400 hover:bg-amber-500 text-white px-4 py-2 rounded-lg transition mt-2 sm:mt-0">
+                                class="info-btn">
                                 Info
                             </a>
                         </div>

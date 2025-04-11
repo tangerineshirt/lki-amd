@@ -1,9 +1,9 @@
 <x-navbar>
-    <div class="flex items-center justify-center h-screen"
-        style="background-image: url('{{asset('images/fotbar_hitamputih.png')}}'); background-size: cover; background-position: center;">
+    <div class="flex items-center justify-center h-screen bg-black/70 bg-blend-multiply"
+        style="background-image: url('{{asset('images/Fotbar_AMD.jpg')}}'); background-size: cover; background-position: center;">
         <div class="flex flex-col items-center">
-            <h1 class="font-bold text-9xl text-white">LKI-AMD</h1>
-            <p class="text-white font-semibold">Lembaga Kajian Islam Al-Fatih Muslim Drenalin</p>
+            <h1 class="font-bold text-9xl text-white ini-font">LKI-AMD</h1>
+            <p class="text-white font-semibold ini-font">Lembaga Kajian Islam Al-Fatih Muslim Drenalin</p>
         </div>
     </div>
     <div class="div-des">
@@ -11,7 +11,7 @@
         <hr class="w-64 border-t-4 border-black my-4 rounded-2xl">
         <div class="p-10">
             <img src="../public/images/hitamPutih.png" alt="" class="float-left w-40 h-auto mr-4">
-            <p>
+            <p class="ini-font">
                 Lembaga Kajian Islam Al-Fatih Muslim Drenalin (LKI-AMD) merupakan sebuah lembaga dakwah yang ada di
                 Fakultas Ilmu Komputer Universitas Brawijaya (FILKOM UB).
                 Nama Al-Fatih diambil dari seorang pejuang Islam yaitu Muhammad II bin Murad atau lebih dikenal dengan
@@ -22,12 +22,12 @@
             </p>
         </div>
     </div>
-    <h1 class="m-8 mt-20 mb-4 text-4xl justify-self-center font-bold">
+    {{-- <h1 class="m-8 mt-20 mb-4 text-4xl justify-self-center font-bold ini-font">
         Karakter Kami
     </h1>
-    <hr class="border-4 w-32 border-amber-500 rounded-2xl justify-self-center">
-    <div class="m-8 rounded-2xl shadow-md bg-gradient-to-r from-blue-100 to-blue-50 ">
-        <h1 class="pt-10 pl-10 text-2xl text-amber-300">
+    <hr class="line"> --}}
+    <div class="karakter bg-gradient-to-bl from-white to-blue-50">
+        <h1 class="pt-10 pl-10 text-2xl text-blue-950">
             <b>Shiddiq</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -41,8 +41,8 @@
         </div>
     </div>
 
-    <div class="m-8 rounded-2xl shadow-md bg-gradient-to-l from-blue-100 to-blue-50">
-        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-300">
+    <div class="karakter bg-gradient-to-br from-white to-blue-50">
+        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-blue-950">
             <b>Amanah</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -54,8 +54,8 @@
             <img src="../public/images/amanah.png" alt="" class="w-30 h-auto mr-4">
         </div>
     </div>
-    <div class="m-8 rounded-2xl shadow-md bg-gradient-to-r from-blue-100 to-blue-50">
-        <h1 class="pt-10 pl-10 text-2xl text-amber-300">
+    <div class="karakter bg-gradient-to-bl from-white to-blue-50">
+        <h1 class="pt-10 pl-10 text-2xl text-blue-950">
             <b>Fathonah</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">
@@ -67,8 +67,8 @@
             </p>
         </div>
     </div>
-    <div class="m-8 rounded-2xl shadow-md bg-gradient-to-l from-blue-100 to-blue-50">
-        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-amber-300">
+    <div class="karakter bg-gradient-to-br from-white to-blue-50">
+        <h1 class="pt-10 pr-16 text-2xl justify-self-end text-blue-950">
             <b>Tabligh</b>
         </h1>
         <div class=" flex justify-center items-center p-10 pt-0">

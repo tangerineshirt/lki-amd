@@ -5,52 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LKI-AMD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="ini-font">
     <nav>
         <div class="flex h-12 mx-6 my-1 justify-between items-center">
             <img class="my-2 h-8" src="{{ asset('images/putihHitam.png') }}" alt="Logo LKI-AMD">
             <ul class="flex gap-4 justify-center">
                 <li>
-                    <a href="{{url('/')}}" class="relative group text-sm font-semibold text-white pb-1">
+                    <a href="{{url('/')}}" class="ini-font relative group text-sm font-semibold text-white pb-1">
                         Home
                         <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('divisi')}}" class="relative group text-sm font-semibold text-white pb-1">
+                    <a href="{{route('divisi')}}" class="ini-font relative group text-sm font-semibold text-white pb-1">
                         Divisi
                         <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('proker')}}" class="relative group text-sm font-semibold text-white pb-1">
+                    <a href="{{route('proker')}}" class="ini-font relative group text-sm font-semibold text-white pb-1">
                         Program Kerja
                         <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('pengurus')}}" class="relative group text-sm font-semibold text-white pb-1">
+                    <a href="{{route('pengurus')}}" class="ini-font relative group text-sm font-semibold text-white pb-1">
                         Kepengurusan
                         <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('visi')}}" class="relative group text-sm font-semibold text-white pb-1">
+                    <a href="{{route('visi')}}" class="ini-font relative group text-sm font-semibold text-white pb-1">
                         Visi
                         <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('misi')}}" class="relative group text-sm font-semibold text-white pb-1">
+                    <a href="{{route('misi')}}" class="ini-font relative group text-sm font-semibold text-white pb-1">
                         Misi
                         <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('info')}}" class="relative group text-sm font-semibold text-white pb-1">
+                    <a href="{{route('info')}}" class="ini-font relative group text-sm font-semibold text-white pb-1">
                         Berita
                         <span class="absolute left-1/2 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:left-0 group-hover:w-full"></span>
                     </a>
@@ -74,7 +75,7 @@
     </main>
     <footer class=" bg-blue-950 bg-blend-color p-0.25 w-full">
         <div class="flex h-20 mx-6 my-1 justify-between items-center">
-            <p class="text-white">© 2025 LKI-AMD</p>
+            <p class="text-white ini-font">© 2025 LKI-AMD</p>
             <div class="flex justify-between items-center">
                 <img src="{{asset('images/ub.png')}}" alt="Logo UB" class="h-16">
                 <img src="{{asset('images/filkom.png')}}" alt="Logo FILKOM" class="h-16">
