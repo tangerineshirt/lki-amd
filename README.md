@@ -1,6 +1,6 @@
 # 🌙 Website Resmi LKI-AMD
 
-Selamat datang di repository website resmi **Lembaga Kajian Islam Al-Fatih Drenalin** (LKI-AMD)  
+Selamat datang di repository website resmi **Lembaga Kajian Islam Al-Fatih Muslim Drenalin** (LKI-AMD)  
 Fakultas Ilmu Komputer - Universitas Brawijaya.
 
 Website ini bertujuan untuk menjadi wadah informasi dan dokumentasi kegiatan dakwah LKI-AMD serta memudahkan akses informasi untuk pengurus, anggota, dan masyarakat umum.
@@ -9,7 +9,7 @@ Website ini bertujuan untuk menjadi wadah informasi dan dokumentasi kegiatan dak
 
 ## 🚀 Tentang LKI-AMD
 
-LKI-AMD (Lembaga Kajian Islam Al-Fatih Drenalin) merupakan lembaga dakwah Fakultas Ilmu Komputer Universitas Brawijaya.  
+LKI-AMD (Lembaga Kajian Islam Al-Fatih Muslim Drenalin) merupakan lembaga dakwah Fakultas Ilmu Komputer Universitas Brawijaya.  
 Kami berfokus pada:
 
 - 🌱 Pembinaan keislaman mahasiswa
