@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class DivisionController extends Controller
 {
     public function divisi(){
-        $divisions = Division::all();
+        $divisions = Division::orderBy('id')->get();
 
         return view('divisi', ['divisions' => $divisions]);
     }
@@ -48,5 +48,24 @@ class DivisionController extends Controller
         $division->delete();
 
         return redirect()->route('divisi');
+    }
+
+    public function showEditDivision(Division $division){
+        return view('editDivision', ['division'=>$division]);
+    }
+
+    public function editDivision(Request $request, Division $division){
+        $request->validate([
+            'name' => 'required|string|max:225',
+            'description' => 'required|string|min:20|max:2000',
+        ]);
+
+        $divisi = Division::findOrFail($division->id);
+        $divisi->update([
+            'name' => $request->name,
+            'description' => $request->description,
+        ]);
+
+        return redirect()->route('divisi')->with('success', 'Divisi berhasil diperbarui!');
     }
 }

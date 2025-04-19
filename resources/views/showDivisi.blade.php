@@ -13,6 +13,13 @@
                     <button type="submit" class="delete my-4">Delete</button>
                 </form>
             </div>
+            <div class="flex justify-center">
+                <a href="{{ route('showDivision.edit', $division->id) }}">
+                    <button class="bg-green-500 p-2 rounded-lg hover:scale-110 transition-transform duration-300">
+                        Edit
+                    </button>
+                </a>
+            </div>
         @endauth
     </div>
 </x-navbar>

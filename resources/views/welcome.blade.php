@@ -1,11 +1,31 @@
 <x-navbar>
-    <div class="flex items-center justify-center h-screen bg-black/70 bg-blend-multiply"
-        style="background-image: url('{{asset('images/Fotbar_AMD.jpg')}}'); background-size: cover; background-position: center;">
+    <div class="flex items-center justify-center min-h-screen py-10 bg-black/70 bg-blend-multiply" id='bgCarousel'
+        style="transition: background-image 1s ease-in-out; background-size: cover; background-position: center;">
         <div class="flex flex-col items-center">
-            <h1 class="font-bold text-9xl text-white ini-font">LKI-AMD</h1>
-            <p class="text-white font-semibold ini-font">Lembaga Kajian Islam Al-Fatih Muslim Drenalin</p>
+            <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white">LKI-AMD</h1>
+            <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-center px-4">Lembaga Kajian Islam Al-Fatih Muslim Drenalin</p>
         </div>
     </div>
+    <script>
+        const images = [
+            "{{ asset('images/Fotbar_AMD.jpg') }}",
+            "{{ asset('images/Fotbar_SAYA.jpg') }}",
+            "{{ asset('images/Fotbar_FG.jpg') }}",
+            "{{ asset('images/Fotbar_LDF.jpg') }}",
+            "{{ asset('images/Fotbar_OH.jpg') }}"
+        ];
+
+        let current = 0;
+        const bg = document.getElementById("bgCarousel");
+
+        function changeBackground() {
+            bg.style.backgroundImage = `url('${images[current]}')`;
+            current = (current + 1) % images.length;
+        }
+
+        changeBackground(); // initial
+        setInterval(changeBackground, 5000); // every 5s
+    </script>
     <div class="div-des">
         <img src="../public/images/salam.png" alt="" class="max-w-100 max-h-50">
         <hr class="w-64 border-t-4 border-black my-4 rounded-2xl">

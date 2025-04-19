@@ -16,7 +16,7 @@ class MigrasiDataSeeder extends Seeder
         $divisions = DB::connection('sqlite_old')->table('divisions')->get();
 
         foreach ($divisions as $item) {
-            DB::connection('pgsql')->table('divisions')->insert([
+            DB::connection('mysql')->table('divisions')->insert([
                 'name' => $item->name,
                 'description' =>$item->description,
                 'created_at' => $item->created_at,
@@ -27,7 +27,7 @@ class MigrasiDataSeeder extends Seeder
         $infos = DB::connection('sqlite_old')->table('infos')->get();
 
         foreach ($infos as $item) {
-            DB::connection('pgsql')->table('infos')->insert([
+            DB::connection('mysql')->table('infos')->insert([
                 'title' => $item->title,
                 'content' =>$item->content,
                 'image1' => $item->image1,
@@ -41,7 +41,7 @@ class MigrasiDataSeeder extends Seeder
         $leaders = DB::connection('sqlite_old')->table('leaders')->get();
 
         foreach ($leaders as $item) {
-            DB::connection('pgsql')->table('leaders')->insert([
+            DB::connection('mysql')->table('leaders')->insert([
                 'name' => $item->name,
                 'rank' =>$item->rank,
                 'position' => $item->position,

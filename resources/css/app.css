@@ -11,7 +11,7 @@
 
 
 nav{
-    @apply p-0.25 w-full shadow-2xl bg-blend-color bg-blue-950 fixed top-0 z-50 border-2 border-b-white
+    @apply p-0.25 w-full shadow-2xl bg-blend-color bg-blue-950 fixed top-0 z-50 border-2 border-b-white rounded-b-xl
 }
 
 ul{
@@ -46,7 +46,7 @@ input, select{
 }
 
 .login{
-    @apply bg-amber-300 rounded-lg hover:scale-110 transition-transform duration-300 p-2
+    @apply bg-blue-950 rounded-lg hover:scale-110 transition-transform duration-300 p-2 text-white
 }
 
 .form-layout{
@@ -58,7 +58,7 @@ input, select{
 }
 
 .admin{
-    font-family: 'Poppins', 'sans-serif';
+    font-family: 'Reem Kufi', sans-serif;
     @apply rounded-md text-white font-semibold p-1 text-sm border-2 border-white hover:bg-white hover:text-black transition-all duration-300 
 }
 
@@ -75,7 +75,7 @@ input, select{
 }
 
 .add{
-    @apply bg-amber-400 hover:bg-amber-500 text-white font-semibold px-6 py-2 rounded-lg transition hover:scale-105 duration-300
+    @apply bg-blue-950 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition hover:scale-105 duration-300
 }
 
 .line{
@@ -83,7 +83,7 @@ input, select{
 }
 
 .ini-font{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Reem Kufi', sans-serif;
 }
 
 .karakter{
@@ -92,6 +92,28 @@ input, select{
 
 .info-btn{
     @apply bg-blue-950 hover:bg-white hover:text-black text-white px-4 py-2 rounded-lg transition mt-2 sm:mt-0
+}
+
+.bg-carousel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.time-proker{
+    @apply font-semibold text-center text-gray-500
 }
 
 /* * {

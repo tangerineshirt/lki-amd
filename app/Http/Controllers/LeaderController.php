@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class LeaderController extends Controller
 {
     public function pengurus(){
-        $leaders = Leader::all();
+        $leaders = Leader::orderBy('id')->get();
         $intiLeaders = $leaders->where('rank', 'Inti');
         $harianLeaders = $leaders->where('rank', 'Harian');
         return view('pengurus', ['intiLeaders' => $intiLeaders], ['harianLeaders'=>$harianLeaders]);

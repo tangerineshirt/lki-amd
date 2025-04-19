@@ -5,7 +5,7 @@
     </div>
 
     <p>
-    <ol type="1" class="justify-self-center mt-4 bg-gray-100 rounded-2xl p-8 shadow-lg">
+    <ol type="1" class="m-16 mt-4 bg-gray-100 rounded-2xl p-8 shadow-lg">
         <li>
             1. Menanamkan kesadaran akan pentingnya pengamalan nilai-nilai Islam di tengah masyarakat.
         </li>

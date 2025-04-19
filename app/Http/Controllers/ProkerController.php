@@ -19,7 +19,7 @@ class ProkerController extends Controller
     }
 
     public function showAddProker(){
-        $divisions = Division::all();
+        $divisions = Division::orderBy('id')->get();
         return view('addProker', ['divisions'=>$divisions]);
     }
 

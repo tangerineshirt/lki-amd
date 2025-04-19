@@ -1,4 +1,8 @@
 <x-navbar>
+    <div class="text-center mt-12 mb-6">
+        <h1 class="text-4xl font-bold">Tambah Pengurus</h1>
+        <hr class="line">
+    </div>
     <form action="{{ route('addLeader') }}" method="POST" enctype="multipart/form-data" class="form-layout">
         @csrf
         <label for="name" class="block font-semibold mb-1">Nama Pengurus:</label>

@@ -45,6 +45,8 @@ Route::middleware('auth')->controller(DivisionController::class)->group(function
     Route::get('/addDivision', 'showAddDivision')->name('show.addDivision');
     Route::post('/addDivision', 'addDivision')->name('addDivision');
     Route::delete('/divisi/{division}', 'deleteDivision')->name('delete.division');
+    Route::get('/divisi/{division}/edit', 'showEditDivision')->name('showDivision.edit');
+    Route::put('/divisi/{division}', 'editDivision')->name('division.edit');
 });
 
 //mengatur halaman tambah proker untuk admin
