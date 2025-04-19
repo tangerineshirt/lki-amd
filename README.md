@@ -25,6 +25,6 @@ Project ini dibangun menggunakan:
 
 - **Framework**: Laravel 12
 - **Frontend**: Tailwind CSS, Blade Template
-- **Database**: PostgreSQL
+- **Database**: MySQL
 - **Tools tambahan**: Laravel Seeder, Migration, dan Artisan Command
 - **Deployment Ready**: Disiapkan untuk environment production
