@@ -4,6 +4,8 @@
         @method('PUT')
         <label for="name" class="block font-semibold mb-1">Nama Divisi Baru:</label>
         <input  class="w-full p-2 bg-gray-200 rounded" type="text" name="name" id='name' value="{{ old('name', $division->name) }}" required placeholder="Nama Divisi">
+        <label for="image" class="block font-semibold mb-1">Gambar Cover:</label>
+        <input type="file" name="image" id="image" accept="image/*" required>
         <label for="description" class="block font-semibold mb-1">Tentang Divisi:</label>
         <textarea
           rows="5"

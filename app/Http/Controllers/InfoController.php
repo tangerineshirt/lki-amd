@@ -9,7 +9,7 @@ class InfoController extends Controller
 {
     public function info()
     {
-        $infos = Info::orderBy('created_at', 'desc')->get();
+        $infos = Info::orderBy('created_at', 'desc')->paginate(5);
         return view('info', ['infos' => $infos]);
     }
 
@@ -27,26 +27,33 @@ class InfoController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:225',
-            'content' => 'required|string|min:20|max:2000',
-            'image1' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'image2' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'image3' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'content' => 'required|string|min:20',
         ]);
         $data = [
             'title' => $request->title,
             'content' => $request->content,
         ];
-        foreach (['image1', 'image2', 'image3'] as $imgField) {
-            if ($request->hasFile($imgField)) {
-                $data[$imgField] = $request->file($imgField)->store('berita', 'public');
-            }
-        }
 
         Info::create($data);
         return redirect()->route('info');
     }
+    public function uploadImage(Request $request)
+    {
+        if ($request->hasFile('upload')) {
+            $file = $request->file('upload');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $path = $file->storeAs('berita-ckeditor/' . date('Y/m/d'), $filename, 'public'); // bebas, bisa folder lain
 
-    public function deleteInfo(Info $info){
+            return response()->json([
+                'url' => asset('storage/' . $path),
+            ]);
+        }
+
+        return response()->json(['error' => 'No file uploaded'], 400);
+    }
+
+    public function deleteInfo(Info $info)
+    {
         $info->delete();
 
         return redirect()->route('info');

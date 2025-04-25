@@ -20,7 +20,7 @@
                 @foreach ($division->prokers as $proker)
                     <li class="flex {{ $loop->last ? 'mr-5' : '' }}">
                         <div
-                            class="listDiv">
+                            class="listDiv gradient-box">
                             <h3 class="text-lg font-medium text-gray-800 break-words">{{ $proker->name }}</h3>
                             <a href="{{ route('show.Proker', $proker->id) }}"
                                 class="info-btn">

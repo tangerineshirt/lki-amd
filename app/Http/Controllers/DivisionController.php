@@ -33,13 +33,13 @@ class DivisionController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:225',
             'description' => 'required|string|min:20|max:2000',
-            // 'image' => 'required|image|max:2048',
+            'image' => 'required|image|max:2048',
         ]);
-        // $path = $request->file('image')->store('divisions', 'public');
+        $path = $request->file('image')->store('divisions', 'public');
         Division::create([
             'name' => $validated['name'],
             'description' => $validated['description'],
-            // 'image' => $path, 
+            'image' => $path, 
         ]);
         return redirect()->route('divisi');
     }
@@ -58,12 +58,14 @@ class DivisionController extends Controller
         $request->validate([
             'name' => 'required|string|max:225',
             'description' => 'required|string|min:20|max:2000',
+            'image' => 'required|image|max:2048',
         ]);
-
+        $path = $request->file('image')->store('divisions', 'public');
         $divisi = Division::findOrFail($division->id);
         $divisi->update([
             'name' => $request->name,
             'description' => $request->description,
+            'image' => $path, 
         ]);
 
         return redirect()->route('divisi')->with('success', 'Divisi berhasil diperbarui!');

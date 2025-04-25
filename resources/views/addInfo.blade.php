@@ -6,20 +6,62 @@
     <form method="POST" action="{{ route('addInfo') }}" enctype="multipart/form-data" class="form-layout">
         @csrf
         <label for="title">Judul:</label>
-        <input type="text" name="title" id="title" required class="block font-semibold mb-1" value="{{ old('title') }}">
+        <input type="text" name="title" id="title" required class="block font-semibold mb-1"
+            value="{{ old('title') }}">
 
         <label for="content" class="block font-semibold mb-1">Isi:</label>
-        <textarea rows="5" id="content" name="content" required class="w-full p-2 bg-blue-100 border rounded">{{ old('content') }}</textarea>
-
-        <label for="image1" class="block font-semibold mb-1">Gambar 1:</label>
-        <input type="file" name="image1" id="image1" accept="image/*">
-
-        <label for="image2" class="block font-semibold mb-1">Gambar 2:</label>
-        <input type="file" name="image2" id="image2" accept="image/*">
-
-        <label for="image3" class="block font-semibold mb-1">Gambar 3:</label>
-        <input type="file" name="image3" id="image3" accept="image/*">
+        <textarea rows="5" id="content" name="content" class="w-full p-2 bg-blue-100 border rounded">{{ old('content') }}</textarea>
 
         <button type="submit" class="login">Simpan</button>
     </form>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#content'), {
+                extraPlugins: [ MyCustomUploadAdapterPlugin ]
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    
+        function MyCustomUploadAdapterPlugin(editor) {
+            editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+                return new MyUploadAdapter(loader);
+            };
+        }
+    
+        class MyUploadAdapter {
+            constructor(loader) {
+                this.loader = loader;
+            }
+    
+            upload() {
+                return this.loader.file
+                    .then(file => new Promise((resolve, reject) => {
+                        const formData = new FormData();
+                        formData.append('upload', file);
+                        formData.append('_token', '{{ csrf_token() }}');
+    
+                        fetch('{{ route('upload.image') }}', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(result => {
+                            resolve({
+                                default: result.url
+                            });
+                        })
+                        .catch(error => {
+                            reject('Upload failed');
+                            console.error(error);
+                        });
+                    }));
+            }
+    
+            abort() {
+                // Optional
+            }
+        }
+    </script>
 </x-navbar>

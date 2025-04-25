@@ -13,17 +13,17 @@
         </div>
     @endauth
 
-    <ul class="max-w-3xl w-full space-y-4 mx-auto px-4 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 px-8 mb-8">
         @foreach ($divisions as $division)
-            <li class="flex {{ $loop->last ? 'mr-5' : '' }}">
-                <div class="listDiv">
-                    <h3 class="text-lg font-medium text-gray-800 break-words">{{ $division->name }}</h3>
-                    <a href="{{ route('show.division', $division->id) }}"
-                       class="info-btn">
-                        Info
-                    </a>
+            <a href="{{ route('show.division', $division->id) }}">
+                <div class="gradient-box p-6 rounded-xl shadow-md hover:shadow-lg transition flex-col justify-items-center h-full">
+                    <div class="w-48 h-64 flex items-center justify-center">
+                        <img src="{{ asset('storage/' . $division->image) }}" alt="{{ $division->name }}"
+                            class="max-h-full object-contain rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-xl font-semibold">{{ $division->name }}</h3>
                 </div>
-            </li>
+            </a>
         @endforeach
-    </ul>
+    </div>
 </x-navbar>

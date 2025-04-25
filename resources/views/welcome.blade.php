@@ -3,16 +3,37 @@
         style="transition: background-image 1s ease-in-out; background-size: cover; background-position: center;">
         <div class="flex flex-col items-center">
             <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white">LKI-AMD</h1>
-            <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-center px-4">Lembaga Kajian Islam Al-Fatih Muslim Drenalin</p>
+            <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-center px-4">
+                Lembaga Kajian Islam Al-Fatih Muslim Drenalin</p>
         </div>
     </div>
     <script>
         const images = [
-            "{{ asset('images/Fotbar_AMD.jpg') }}",
-            "{{ asset('images/Fotbar_SAYA.jpg') }}",
-            "{{ asset('images/Fotbar_FG.jpg') }}",
-            "{{ asset('images/Fotbar_LDF.jpg') }}",
-            "{{ asset('images/Fotbar_OH.jpg') }}"
+            @if ($picture && $picture->image1)
+                "{{ asset('storage/' . $picture->image1) }}",
+            @else
+                "{{asset('images/gray.jpg')}}",
+            @endif
+            @if ($picture && $picture->image2)
+                "{{ asset('storage/' . $picture->image2) }}",
+            @else
+                "{{asset('images/gray.jpg')}}",
+            @endif
+            @if ($picture && $picture->image3)
+                "{{ asset('storage/' . $picture->image3) }}",
+            @else
+                "{{asset('images/gray.jpg')}}",
+            @endif
+            @if ($picture && $picture->image4)
+                "{{ asset('storage/' . $picture->image4) }}",
+            @else
+                "{{asset('images/gray.jpg')}}",
+            @endif
+            @if ($picture && $picture->image5)
+                "{{ asset('storage/' . $picture->image5) }}",
+            @else
+                "{{asset('images/gray.jpg')}}",
+            @endif
         ];
 
         let current = 0;
@@ -26,6 +47,13 @@
         changeBackground(); // initial
         setInterval(changeBackground, 5000); // every 5s
     </script>
+    @auth
+        <div class="flex justify-center mb-10 mt-10">
+            <a href="{{ route('show.addPicture') }}" class="add">
+                Ubah Gambar
+            </a>
+        </div>
+    @endauth
     <div class="div-des">
         <img src="../public/images/salam.png" alt="" class="max-w-100 max-h-50">
         <hr class="w-64 border-t-4 border-black my-4 rounded-2xl">
@@ -42,15 +70,11 @@
             </p>
         </div>
     </div>
-    {{-- <h1 class="m-8 mt-20 mb-4 text-4xl justify-self-center font-bold ini-font">
-        Karakter Kami
-    </h1>
-    <hr class="line"> --}}
     <div class="karakter bg-gradient-to-bl from-white to-blue-50">
         <h1 class="pt-10 pl-10 text-2xl text-blue-950">
             <b>Shiddiq</b>
         </h1>
-        <div class=" flex justify-center items-center p-10 pt-0">
+        <div class=" flex justify-center items-center p-10 pt-4">
             <img src="../public/images/shiddiq.png" alt="" class="w-30 h-auto mr-4">
             <p>
                 Sifat shiddiq adalah salah satu sifat utama yang dimiliki oleh Nabi Muhammad ﷺ, yang berarti jujur atau
@@ -65,20 +89,20 @@
         <h1 class="pt-10 pr-16 text-2xl justify-self-end text-blue-950">
             <b>Amanah</b>
         </h1>
-        <div class=" flex justify-center items-center p-10 pt-0">
+        <div class=" flex justify-center items-center p-10 pt-4">
             <p>
                 Amanah adalah salah satu sifat utama yang dimiliki oleh Nabi Muhammad ﷺ, yang berarti dapat dipercaya
                 dalam menjalankan tugas, menyampaikan wahyu, dan menjaga titipan. Sejak kecil, beliau dikenal sebagai
                 pribadi yang jujur dan bertanggung jawab.
             </p>
-            <img src="../public/images/amanah.png" alt="" class="w-30 h-auto mr-4">
+            <img src="../public/images/amanah.png" alt="" class="w-30 h-auto mr-0 ml-4">
         </div>
     </div>
     <div class="karakter bg-gradient-to-bl from-white to-blue-50">
         <h1 class="pt-10 pl-10 text-2xl text-blue-950">
             <b>Fathonah</b>
         </h1>
-        <div class=" flex justify-center items-center p-10 pt-0">
+        <div class=" flex justify-center items-center p-10 pt-4">
             <img src="../public/images/fathonah.png" alt="" class="w-30 h-auto mr-4">
             <p>
                 Fathonah berarti cerdas, bijaksana, dan memiliki kecerdasan luar biasa dalam berpikir dan bertindak.
@@ -91,13 +115,13 @@
         <h1 class="pt-10 pr-16 text-2xl justify-self-end text-blue-950">
             <b>Tabligh</b>
         </h1>
-        <div class=" flex justify-center items-center p-10 pt-0">
+        <div class=" flex justify-center items-center p-10 pt-4">
             <p>
                 Tabligh berarti menyampaikan segala wahyu dan ajaran Allah dengan jujur, tanpa menyembunyikan atau
                 mengubahnya. Nabi Muhammad ﷺ memiliki tugas utama sebagai utusan Allah untuk menyampaikan Islam kepada
                 umat manusia, meskipun menghadapi berbagai rintangan dan ancaman.
             </p>
-            <img src="../public/images/tabligh.png" alt="" class="w-30 h-auto mr-4">
+            <img src="../public/images/tabligh.png" alt="" class="w-30 h-auto mr-0 ml-4">
         </div>
     </div>
 </x-navbar>

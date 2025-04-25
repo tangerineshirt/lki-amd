@@ -11,7 +11,7 @@
 </head>
 
 <body class="ini-font relative">
-    <nav>
+    <nav class="this-nav">
         <div class="flex h-12 mx-6 my-1 justify-between items-center">
             <img class="my-2 h-8" src="{{ asset('images/putihHitam.png') }}" alt="Logo LKI-AMD">
 

@@ -5,11 +5,11 @@ use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\ProkerController;
 use App\Http\Controllers\LeaderController;
+use App\Http\Controllers\PictureController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+//halaman utama
+Route::get('/', [PictureController::class, 'home'])->name('home');
 
 // logout 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -67,5 +67,11 @@ Route::middleware('auth')->controller(LeaderController::class)->group(function()
 Route::middleware('auth')->controller(InfoController::class)->group(function(){
     Route::get('/addInfo', 'showAddInfo')->name('show.addInfo');
     Route::post('/addInfo', 'addInfo')->name('addInfo');
+    Route::post('uploadImage', 'uploadImage')->name('upload.image');
     Route::delete('/berita/{info}', 'deleteInfo')->name('delete.info');
+});
+
+Route::middleware('auth')->controller(PictureController::class)->group(function(){
+    Route::get('/addPicture', 'showAddPicture')->name('show.addPicture');
+    Route::post('/addPicture', 'addPicture')->name('add.picture');
 });
