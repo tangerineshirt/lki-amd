@@ -67,7 +67,7 @@ Route::middleware('auth')->controller(LeaderController::class)->group(function()
 Route::middleware('auth')->controller(InfoController::class)->group(function(){
     Route::get('/addInfo', 'showAddInfo')->name('show.addInfo');
     Route::post('/addInfo', 'addInfo')->name('addInfo');
-    Route::post('uploadImage', 'uploadImage')->name('upload.image');
+    Route::post('/uploadImage', 'uploadImage')->name('upload.image');
     Route::delete('/berita/{info}', 'deleteInfo')->name('delete.info');
 });
 
